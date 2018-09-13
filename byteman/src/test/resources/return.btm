@@ -1,0 +1,8 @@
+RULE NewReturn
+CLASS net.a.g.demo.byteman.ObjectToIntercept
+METHOD call
+AT EXIT
+IF true
+DO traceln("### ByteMan Call ###");
+   return "### ByteMan Call ###";
+ENDRULE

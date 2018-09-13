@@ -1,0 +1,8 @@
+RULE ThrowException
+INTERFACE net.a.g.demo.byteman.Atomic
+METHOD change(int)
+AT EXIT
+IF true
+DO traceln("### ByteMan Call ###");
+   throw new RuntimeException();
+ENDRULE
