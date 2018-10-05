@@ -24,7 +24,6 @@ package net.a.g.demo.byteman;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.jboss.byteman.contrib.bmunit.BMScript;
@@ -44,18 +43,9 @@ public class BasicIntUnitTest {
 	public void testExample() throws Exception {
 		Container<Atomic> theContainer = new Container<Atomic>();
 		ExampleSTM basic = new ExampleSTM();
-		boolean success = true;
 		Atomic obj = null;
 
-		try {
-			obj = theContainer.create(basic);
-		} catch (final Throwable ex) {
-			ex.printStackTrace();
-
-			success = false;
-		}
-
-		assertTrue(success);
+		obj = theContainer.create(basic);
 
 		AtomicAction a = new AtomicAction();
 
@@ -85,18 +75,9 @@ public class BasicIntUnitTest {
 	public void testExampleThrow() throws Exception {
 		Container<Atomic> theContainer = new Container<Atomic>();
 		ExampleSTM basic = new ExampleSTM();
-		boolean success = true;
 		Atomic obj = null;
 
-		try {
-			obj = theContainer.create(basic);
-		} catch (final Throwable ex) {
-			ex.printStackTrace();
-
-			success = false;
-		}
-
-		assertTrue(success);
+		obj = theContainer.create(basic);
 
 		AtomicAction a = new AtomicAction();
 

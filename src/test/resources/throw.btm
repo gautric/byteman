@@ -3,6 +3,6 @@ INTERFACE net.a.g.demo.byteman.Atomic
 METHOD change(int)
 AT EXIT
 IF true
-DO traceln("### ByteMan Call ###");
+DO traceln("### ByteMan Exception ###");
    throw new RuntimeException();
 ENDRULE
