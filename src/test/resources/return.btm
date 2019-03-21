@@ -1,5 +1,5 @@
 RULE NewReturn
-CLASS net.a.g.demo.byteman.ObjectToIntercept
+CLASS net.a.g.demo.byteman.entity.ObjectToIntercept
 METHOD call
 AT EXIT
 IF true

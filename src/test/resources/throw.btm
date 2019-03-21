@@ -1,5 +1,5 @@
 RULE ThrowException
-INTERFACE net.a.g.demo.byteman.Atomic
+INTERFACE net.a.g.demo.byteman.stm.Atomic
 METHOD change(int)
 AT EXIT
 IF true
