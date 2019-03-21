@@ -33,6 +33,9 @@ import org.junit.runner.RunWith;
 
 import com.arjuna.ats.arjuna.AtomicAction;
 
+import net.a.g.demo.byteman.stm.Atomic;
+import net.a.g.demo.byteman.stm.AtomicInteger;
+
 /**
  * based on @author Mark Little
  */
@@ -42,7 +45,7 @@ public class BasicIntUnitTest {
 	@Test
 	public void testExample() throws Exception {
 		Container<Atomic> theContainer = new Container<Atomic>();
-		ExampleSTM basic = new ExampleSTM();
+		AtomicInteger basic = new AtomicInteger();
 		Atomic obj = null;
 
 		obj = theContainer.create(basic);
@@ -74,7 +77,7 @@ public class BasicIntUnitTest {
 	@BMScript(value = "throw.btm", dir = "src/test/resources")
 	public void testExampleThrow() throws Exception {
 		Container<Atomic> theContainer = new Container<Atomic>();
-		ExampleSTM basic = new ExampleSTM();
+		AtomicInteger basic = new AtomicInteger();
 		Atomic obj = null;
 
 		obj = theContainer.create(basic);

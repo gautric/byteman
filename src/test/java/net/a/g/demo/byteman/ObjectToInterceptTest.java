@@ -6,6 +6,8 @@ import org.jboss.byteman.contrib.bmunit.BMScript;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import net.a.g.demo.byteman.entity.ObjectToIntercept;
+
 @RunWith(org.jboss.byteman.contrib.bmunit.BMUnitRunner.class)
 public class ObjectToInterceptTest {
 
@@ -21,4 +23,11 @@ public class ObjectToInterceptTest {
 		ObjectToIntercept oti = new ObjectToIntercept();
 		assertEquals("### ByteMan Call ###", oti.call());
 	}
+
+	@Test
+	public void testBytemanedCallDeprecated() {
+		ObjectToIntercept oti = new ObjectToIntercept();
+		assertEquals("### AspectJ Call ###", oti.callDeprecated());
+	}
+
 }

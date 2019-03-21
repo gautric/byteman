@@ -1,4 +1,4 @@
-package net.a.g.demo.byteman;
+package net.a.g.demo.byteman.stm;
 
 import org.jboss.stm.annotations.Transactional;
 
