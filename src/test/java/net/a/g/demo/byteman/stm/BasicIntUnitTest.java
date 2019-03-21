@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
 
-package net.a.g.demo.byteman;
+package net.a.g.demo.byteman.stm;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

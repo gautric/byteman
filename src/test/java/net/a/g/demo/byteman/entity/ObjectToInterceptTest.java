@@ -1,4 +1,4 @@
-package net.a.g.demo.byteman;
+package net.a.g.demo.byteman.entity;
 
 import static org.junit.Assert.assertEquals;
 
