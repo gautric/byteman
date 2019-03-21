@@ -52,6 +52,8 @@ public class BasicIntUnitTest {
 
 		AtomicAction a = new AtomicAction();
 
+		obj.set(4321);
+
 		a.begin();
 
 		obj.set(1234);
@@ -64,7 +66,7 @@ public class BasicIntUnitTest {
 
 		a.begin();
 
-		obj.change(1);
+		obj.add(1);
 
 		assertThat(obj.get(), is(1235));
 
@@ -84,6 +86,8 @@ public class BasicIntUnitTest {
 
 		AtomicAction a = new AtomicAction();
 
+		obj.set(4321);
+
 		a.begin();
 
 		obj.set(1234);
@@ -96,7 +100,7 @@ public class BasicIntUnitTest {
 		try {
 			a.begin();
 
-			obj.change(1);
+			obj.add(1);
 
 			fail("Exception must be thrown by Byteman");
 

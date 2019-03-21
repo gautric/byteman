@@ -15,7 +15,7 @@ public class AtomicInteger implements Atomic {
 	}
 
 	@WriteLock
-	public void change(int value) throws Exception {
+	public void add(int value) throws Exception {
 		state += value;
 	}
 
